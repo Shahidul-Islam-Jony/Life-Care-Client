@@ -1,8 +1,21 @@
+import Banner from "../../components/Home/Banner/Banner";
+import Doctor from "../../components/Home/Doctor/Doctor";
+import Footer from "../../components/Shared/Footer/Footer";
 
 const Home = () => {
     return (
         <div>
-            This is home page
+            <div className="grid grid-cols-12 mt-5">
+                <div className="col-span-9">
+                    <p>Hello</p>
+                    <Banner></Banner>
+                </div>
+                <div className="col-span-3">
+                    <p>Welcome</p>
+                    <Doctor></Doctor>
+                </div>
+            </div>
+            <Footer></Footer>
         </div>
     );
 };
