@@ -6,8 +6,7 @@ const Home = () => {
     return (
         <div>
             <div className="grid grid-cols-12 mt-5">
-                <div className="col-span-9">
-                    <p>Hello</p>
+                <div className="col-span-9 w-11/12 mx-auto">
                     <Banner></Banner>
                 </div>
                 <div className="col-span-3">
