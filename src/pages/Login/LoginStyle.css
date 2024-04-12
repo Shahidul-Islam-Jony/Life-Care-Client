@@ -212,6 +212,7 @@
     right: 0;
     padding: 0 40px 0 60px;
     /* display: none; */
+    pointer-events: none;
 }
 
 .wrapper .info-text.register{
@@ -293,5 +294,32 @@
     opacity: 1;
     filter: blur(0);
     transition-delay: calc(0.1s* var(--i));
+}
+
+/* to active both side mouse effect when screen size are reduce */
+.wrapper.active .form-box.register{
+    pointer-events: auto;
+}
+.wrapper.active .info-text.register{
+    pointer-events: auto;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 576px) {
+
+.wrapper .form-box{
+    width: 100%;
+}
+
+
+/* Login Info Right side text */
+
+.wrapper .info-text{
+   display: none;
+}
+
+
 }
 

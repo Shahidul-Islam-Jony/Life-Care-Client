@@ -14,6 +14,7 @@ const Login = () => {
                 <span className="bg-animate2"></span>
 
                 {/* Login page */}
+                <div>
                 <div className="form-box login ">
                     <h2 className="animation" style={{ '--i': 0, '--j': 21 }}>Login</h2>    {/* Insert animation class for changing login to reg by animated */}
                     <form action="#">
@@ -38,6 +39,7 @@ const Login = () => {
                 <div className="info-text login">
                     <h2 className="animation" style={{ '--i': 0, '--j': 20 }}>Welcome Back !</h2>
                     <p className="animation" style={{ '--i': 1, '--j': 21 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ullam!</p>
+                </div>
                 </div>
 
 
