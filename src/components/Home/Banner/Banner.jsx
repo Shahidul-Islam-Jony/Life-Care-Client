@@ -15,7 +15,7 @@ import { Autoplay } from 'swiper/modules';
 
 const Banner=()=> {
   return (
-    <>
+    <div className=''>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -24,14 +24,14 @@ const Banner=()=> {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper rounded-lg"
+        className="mySwiper rounded-lg h-48 md:h-72"
       >
         <SwiperSlide><img src={slide1} className='w-full h-full rounded-lg'/></SwiperSlide>
         <SwiperSlide><img src={slide2} className='w-full h-full rounded-lg'/></SwiperSlide>
         <SwiperSlide><img src={slide3} className='w-full h-full rounded-lg'/></SwiperSlide>
         <SwiperSlide><img src={slide4} className='w-full h-full rounded-lg'/></SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 }
 export default Banner;

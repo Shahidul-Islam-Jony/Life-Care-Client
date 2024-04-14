@@ -9,7 +9,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div>
-            <div className="navbar sticky top-0 z-50 md:px-6 text-blue-600 font-bold bg-white shadow-2xl border-2 border-b-blue-700 rounded-b-xl">
+            <div className="navbar fixed top-0 z-50 md:px-6 text-blue-600 font-bold bg-white shadow-2xl border-2 border-b-blue-700 rounded-b-xl">
                 {/* small devices */}
                 <div className="navbar-start">
                     <div className="dropdown">

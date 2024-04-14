@@ -6,13 +6,12 @@ import Footer from "../../components/Shared/Footer/Footer";
 const Home = () => {
     return (
         <div>
-            <div className="grid grid-cols-12 mt-5">
-                <div className="col-span-9 w-11/12 mx-auto">
+            <div className="grid grid-cols-12 mt-24">
+                <div className="col-span-12 md:col-span-9 w-11/12 mx-auto">
                     <Banner></Banner>
                     <CardLink></CardLink>
                 </div>
-                <div className="col-span-3">
-                    <p>Welcome</p>
+                <div className="md:col-span-3">
                     <Doctor></Doctor>
                 </div>
             </div>
