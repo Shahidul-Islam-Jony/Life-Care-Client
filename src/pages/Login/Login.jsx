@@ -1,4 +1,4 @@
-import { FaUser, FaLock,FaFacebook } from "react-icons/fa";
+import { FaUser, FaLock, FaFacebook,FaImage } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FcGoogle } from "react-icons/fc";
 import { useState } from "react";
@@ -16,39 +16,39 @@ const Login = () => {
 
                 {/* Login page */}
                 <div>
-                <div className="form-box login ">
-                    <h2 className="animation" style={{ '--i': 0, '--j': 21 }}>Login</h2>    {/* Insert animation class for changing login to reg by animated */}
-                    <form action="#">
-                        <div className="input-box animation" style={{ '--i': 1, '--j': 22 }}>
-                            <input type="text" required />
-                            <label>Username</label>
-                            <FaUser className="icon" />
-                        </div>
-                        <div className="input-box animation" style={{ '--i': 2, '--j': 23 }}>
-                            <input type="password" required />
-                            <label>Password</label>
-                            <FaLock className="icon" />
-                        </div>
-                        <button type="submit" className="btn1 animation" style={{ '--i': 3, '--j': 24 }}>Login</button>
+                    <div className="form-box login ">
+                        <h2 className="animation" style={{ '--i': 0, '--j': 21 }}>Login</h2>    {/* Insert animation class for changing login to reg by animated */}
+                        <form action="#">
+                            <div className="input-box animation" style={{ '--i': 1, '--j': 22 }}>
+                                <input type="text" required />
+                                <label>Username</label>
+                                <FaUser className="icon" />
+                            </div>
+                            <div className="input-box animation" style={{ '--i': 2, '--j': 23 }}>
+                                <input type="password" required />
+                                <label>Password</label>
+                                <FaLock className="icon" />
+                            </div>
+                            <button type="submit" className="btn1 animation" style={{ '--i': 3, '--j': 24 }}>Login</button>
 
-                        {/* divider */}
-                        <div className="divider divider-primary">OR Login With</div>
-                    
-                        <div className="flex gap-2 mt-4">
-                            <button className="btn btn-outline w-1/2 btn-sm hover:bg-blue-800"><FcGoogle /> Google</button>
-                            <button className="btn btn-outline w-1/2 btn-sm hover:bg-blue-800"><FaFacebook /> Facebook</button>
-                        </div>
+                            {/* divider */}
+                            <div className="animation divider divider-primary" style={{ '--i': 4, '--j': 25 }}>OR Login With</div>
 
-                        <div className="logreg-link animation" style={{ '--i': 4, '--j': 25 }}>
-                            <p>Do not have an account? <a href="#" onClick={() => setIsClicked(true)} className="register-link hover:text-blue-800">Sign Up</a></p>
-                        </div>
-                    </form>
-                </div>
-                {/* Right side Login Text */}
-                <div className="info-text login">
-                    <h2 className="animation" style={{ '--i': 0, '--j': 20 }}>Welcome Back !</h2>
-                    <p className="animation" style={{ '--i': 1, '--j': 21 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ullam!</p>
-                </div>
+                            <div className="animation flex gap-2 mt-4" style={{ '--i': 5, '--j': 26 }}>
+                                <button className="btn btn-outline w-1/2 btn-sm hover:bg-blue-800"><FcGoogle /> Google</button>
+                                <button className="btn btn-outline w-1/2 btn-sm hover:bg-blue-800"><FaFacebook /> Facebook</button>
+                            </div>
+
+                            <div className="logreg-link animation" style={{ '--i': 6, '--j': 27 }}>
+                                <p>Do not have an account? <a href="#" onClick={() => setIsClicked(true)} className="register-link hover:text-blue-800">Sign Up</a></p>
+                            </div>
+                        </form>
+                    </div>
+                    {/* Right side Login Text */}
+                    <div className="info-text login">
+                        <h2 className="animation" style={{ '--i': 0, '--j': 20 }}>Welcome Back !</h2>
+                        <p className="animation" style={{ '--i': 1, '--j': 21 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ullam!</p>
+                    </div>
                 </div>
 
 
@@ -66,7 +66,14 @@ const Login = () => {
                             <label>Email</label>
                             <MdEmail className="icon" />
                         </div>
-                        <div className="input-box animation" style={{ '--i': 20, '--j': 3 }}>
+                        <div className="animation upload" style={{ '--i': 20, '--j': 3 }}>
+                            <span className="flex items-center hover:text-blue-500">
+                                <input type="file" className="relative z-10 h-10 opacity-0" required />
+                                <label className="absolute  border-2 border-t-0 border-x-0 top-0 h-10 border-b-blue-500 w-full text-black">Upload Your Photo</label>
+                                <FaImage className="text-xl"/>
+                            </span>
+                        </div>
+                        <div className="input-box animation" style={{ '--i': 21, '--j': 4 }}>
                             <input type="password" required />
                             <label>Password</label>
                             <FaLock className="icon" />

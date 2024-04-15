@@ -37,7 +37,22 @@
     width: 100%;
     height: 50px;
     /* background: seagreen; */
-    margin: 25px 0;
+    margin: 20px 0;
+}
+
+/* Upload file design */
+/* .form-box .upload input[type="file"]{
+    border: 2px solid red;
+
+} */
+
+.form-box .input-box .upload{
+    color:red;
+    height: 40px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    display: none;
 }
 
 .input-box input{
