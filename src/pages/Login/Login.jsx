@@ -6,7 +6,7 @@ import './LoginStyle.css';
 const Login = () => {
     const [isClicked, setIsClicked] = useState(false);
     return (
-        <div className="flex justify-center mt-16">
+        <div className="flex justify-center mt-28">
             <div className={`wrapper ${isClicked ? 'active' : ''}`}>
                 {/* BG Divider login*/}
                 <span className="bg-animate"></span>

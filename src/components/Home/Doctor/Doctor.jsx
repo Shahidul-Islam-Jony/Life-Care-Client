@@ -3,9 +3,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import doc1 from '../../../assets/images/doctor/dr1.jpg'
 import doc2 from '../../../assets/images/doctor/dr2.jpg'
 import doc3 from '../../../assets/images/doctor/dr3.jpg'
-import doc4 from '../../../assets/images/doctor/dr4.webp'
-
-
 
 
 const Doctor = () => {
@@ -22,9 +19,6 @@ const Doctor = () => {
                 </div>
                 <div>
                     <img src={doc3} />
-                </div>
-                <div>
-                    <img src={doc4} />
                 </div>
             </Carousel>
         </div>
