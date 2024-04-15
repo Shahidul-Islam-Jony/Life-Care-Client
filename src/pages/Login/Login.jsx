@@ -47,7 +47,7 @@ const Login = () => {
                     {/* Right side Login Text */}
                     <div className="info-text login">
                         <h2 className="animation" style={{ '--i': 0, '--j': 20 }}>Welcome Back !</h2>
-                        <p className="animation" style={{ '--i': 1, '--j': 21 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ullam!</p>
+                        <p className="animation" style={{ '--i': 1, '--j': 21 }}>LifeCare is always with your side.</p>
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@ const Login = () => {
                 {/* Left side Register Text */}
                 <div className="info-text register">
                     <h2 className="animation" style={{ '--i': 17, '--j': 0 }}>Welcome Back !</h2>
-                    <p className="animation" style={{ '--i': 18, '--j': 1 }}>Lorem ipsum dolor sit amet consectetur adipisicing!</p>
+                    <p className="animation" style={{ '--i': 18, '--j': 1 }}>Sign Up for getting full support of LifeCare.</p>
                 </div>
 
             </div>
