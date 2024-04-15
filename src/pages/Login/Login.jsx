@@ -1,5 +1,6 @@
-import { FaUser, FaLock } from "react-icons/fa";
+import { FaUser, FaLock,FaFacebook } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { FcGoogle } from "react-icons/fc";
 import { useState } from "react";
 import './LoginStyle.css';
 
@@ -30,8 +31,16 @@ const Login = () => {
                         </div>
                         <button type="submit" className="btn1 animation" style={{ '--i': 3, '--j': 24 }}>Login</button>
 
+                        {/* divider */}
+                        <div className="divider divider-primary">OR Login With</div>
+                    
+                        <div className="flex gap-2 mt-4">
+                            <button className="btn btn-outline w-1/2 btn-sm hover:bg-blue-800"><FcGoogle /> Google</button>
+                            <button className="btn btn-outline w-1/2 btn-sm hover:bg-blue-800"><FaFacebook /> Facebook</button>
+                        </div>
+
                         <div className="logreg-link animation" style={{ '--i': 4, '--j': 25 }}>
-                            <p>Do not have an account? <a href="#" onClick={() => setIsClicked(true)} className="register-link">Sign Up</a></p>
+                            <p>Do not have an account? <a href="#" onClick={() => setIsClicked(true)} className="register-link hover:text-blue-800">Sign Up</a></p>
                         </div>
                     </form>
                 </div>
