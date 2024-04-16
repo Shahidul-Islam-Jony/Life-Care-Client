@@ -3,10 +3,21 @@ import logo from '../../../assets/images/LifeCare.jpg'
 import { IoMdCloseCircleOutline, IoMdLogIn, IoIosContact } from "react-icons/io";
 import { IoHomeOutline } from "react-icons/io5";
 import './active.css'
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
+import { RiLogoutCircleLine } from "react-icons/ri";
 
 const Navbar = () => {
+    const { user, logout } = useContext(AuthContext);
+    // console.log(user);
     const [isOpen, setIsOpen] = useState(false);
+    const [isProfileClick, setIsProfileClicked] = useState(false);
+
+    const handleLogout = () => {
+        logout();
+        setIsProfileClicked(false);
+    }
+
     return (
         <div>
             <div className="navbar fixed top-0 z-50 md:px-6 text-blue-600 font-bold bg-white shadow-2xl border-2 border-b-blue-700 rounded-b-xl">
@@ -38,7 +49,22 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to='/login' className="btn btn-sm btn-outline text-base font-bold text-blue-600 hover:bg-green-800"><IoMdLogIn /> Login</Link>
+                    {
+                        user ? <div>
+
+                            <div className="dropdown dropdown-end">
+                                <div tabIndex={0} role="button" className=""> <img onClick={() => setIsProfileClicked(!isProfileClick)} src={user?.photoURL} title={user?.displayName} className="w-10 h-10 rounded-full border-2 shadow-lg border-blue-800 cursor-pointer" alt={user?.displayName} /></div>
+                                {
+                                    isProfileClick && <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                        <Link onClick={handleLogout} className="flex items-center gap-2 hover:bg-green-800 hover:text-white rounded-lg p-2"><RiLogoutCircleLine /> Logout</Link>
+                                        <Link className="flex items-center gap-2 hover:bg-green-800 hover:text-white rounded-lg p-2">Hello</Link>
+                                        <Link className="flex items-center gap-2 hover:bg-green-800 hover:text-white rounded-lg p-2">Test</Link>
+                                    </ul>
+                                }
+                            </div>
+                        </div> :
+                            <Link to='/login' className="btn btn-sm btn-outline text-base font-bold text-blue-600 hover:bg-green-800"><IoMdLogIn /> Login</Link>
+                    }
                 </div>
             </div>
         </div>

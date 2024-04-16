@@ -29,7 +29,7 @@ const Categories = () => {
                 spaceBetween={30}
                 navigation={true}
                 modules={[Pagination, Navigation]}
-                className="mySwiper w-[1000px] h-70"
+                className="mySwiper md:w-[1000px] h-70"
             >
                 <SwiperSlide><Link className=''><img src={img1}></img></Link></SwiperSlide>
                 <SwiperSlide><Link className=''><img src={img2}></img></Link></SwiperSlide>
