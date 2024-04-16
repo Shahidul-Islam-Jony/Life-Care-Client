@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import swal from "sweetalert";
 
 const Login = () => {
     const [isClicked, setIsClicked] = useState(false);
@@ -25,16 +26,7 @@ const Login = () => {
         login(email, password)
             .then(result => {
                 console.log(result);
-                toast.success('Login Successful !', {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                });
+                swal("Login successful", "success");
                 navigate(location.state || '/');
             })
             .catch(error => {
@@ -98,12 +90,12 @@ const Login = () => {
                             <h2 className="animation" style={{ '--i': 0, '--j': 21 }}>Login</h2>    {/* Insert animation class for changing login to reg by animated */}
                             <form onSubmit={handleLogin} action="#">
                                 <div className="input-box animation" style={{ '--i': 1, '--j': 22 }}>
-                                    <input type="email" required />
+                                    <input type="email" name="email" required />
                                     <label>Email</label>
                                     <MdEmail className="icon" />
                                 </div>
                                 <div className="input-box animation" style={{ '--i': 2, '--j': 23 }}>
-                                    <input type="password" required />
+                                    <input type="password" name="password" required />
                                     <label>Password</label>
                                     <FaLock className="icon" />
                                 </div>
