@@ -6,7 +6,6 @@ import './LoginStyle.css';
 import Registration from "../Registration/Registration";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
-import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import swal from "sweetalert";
 
@@ -30,16 +29,7 @@ const Login = () => {
                 navigate(location.state || '/');
             })
             .catch(error => {
-                toast.error(`${error}`, {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                });
+                swal ( "Oops" ,  {error} ,  "error" );
                 return;
             })
     }
@@ -48,29 +38,11 @@ const Login = () => {
         loginByGoogle()
             .then(result => {
                 console.log(result);
-                toast.success('Login Successful !', {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                });
+                swal("Login successful", "success");
                 navigate(location.state || '/');
             })
             .catch(error => {
-                toast.error(`${error}`, {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                });
+                swal ( "Oops" ,  {error} ,  "error" );
                 return;
             })
     }
@@ -125,7 +97,6 @@ const Login = () => {
 
                 </div>
             </div>
-            <ToastContainer></ToastContainer>
         </div>
     );
 };
