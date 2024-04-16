@@ -1,4 +1,5 @@
-import { FaUser, FaLock, FaFacebook } from "react-icons/fa";
+import { FaLock, FaFacebook } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import { FcGoogle } from "react-icons/fc";
 import { useContext, useState } from "react";
 import './LoginStyle.css';
@@ -97,9 +98,9 @@ const Login = () => {
                             <h2 className="animation" style={{ '--i': 0, '--j': 21 }}>Login</h2>    {/* Insert animation class for changing login to reg by animated */}
                             <form onSubmit={handleLogin} action="#">
                                 <div className="input-box animation" style={{ '--i': 1, '--j': 22 }}>
-                                    <input type="text" required />
-                                    <label>Username</label>
-                                    <FaUser className="icon" />
+                                    <input type="email" required />
+                                    <label>Email</label>
+                                    <MdEmail className="icon" />
                                 </div>
                                 <div className="input-box animation" style={{ '--i': 2, '--j': 23 }}>
                                     <input type="password" required />
