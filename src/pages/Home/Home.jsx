@@ -1,5 +1,6 @@
 import Banner from "../../components/Home/Banner/Banner";
 import CardLink from "../../components/Home/CardLink/CardLink";
+import Categories from "../../components/Home/Categories/Categories";
 import Doctor from "../../components/Home/Doctor/Doctor";
 import Footer from "../../components/Shared/Footer/Footer";
 
@@ -10,6 +11,7 @@ const Home = () => {
                 <div className="col-span-12 md:col-span-9 w-11/12 mx-auto">
                     <Banner></Banner>
                     <CardLink></CardLink>
+                    <Categories></Categories>
                 </div>
                 <div className="md:col-span-3">
                     <Doctor></Doctor>

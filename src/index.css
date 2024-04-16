@@ -3,3 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* For text shadow */
+.textShadow{
+    text-shadow: 2.5px 1px #067218;
+}
