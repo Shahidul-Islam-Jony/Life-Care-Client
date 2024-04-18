@@ -1,3 +1,4 @@
+import BabyCareCom from "../../components/Home/BabyCareCom/BabyCareCom";
 import Banner from "../../components/Home/Banner/Banner";
 import CardLink from "../../components/Home/CardLink/CardLink";
 import Categories from "../../components/Home/Categories/Categories";
@@ -12,6 +13,7 @@ const Home = () => {
                     <Banner></Banner>
                     <CardLink></CardLink>
                     <Categories></Categories>
+                    <BabyCareCom></BabyCareCom>
                 </div>
                 <div className="md:col-span-3">
                     <Doctor></Doctor>
