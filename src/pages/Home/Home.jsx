@@ -28,7 +28,7 @@ const Home = () => {
                     <OTC_MedicineCom></OTC_MedicineCom>
                     <DentalCareCom></DentalCareCom>
                 </div>
-                <div className="md:col-span-3">
+                <div className="md:col-span-3 md:mr-4">
                     <Doctor></Doctor>
                 </div>
             </div>

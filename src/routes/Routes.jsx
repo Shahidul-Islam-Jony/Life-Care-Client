@@ -3,6 +3,7 @@ import Home from "../pages/Home/Home";
 import MainLayout from "../layout/MainLayout";
 import Login from "../pages/Login/Login";
 import BabyCare from "../pages/BabyCare/BabyCare";
+import MedicineLayout from "../layout/MedicineLayout";
 
 
 const router = createBrowserRouter([
@@ -18,8 +19,15 @@ const router = createBrowserRouter([
                 path:'login',
                 element:<Login></Login>
             },
+
+        ]
+    },
+    {
+        path:'medicine/layout',
+        element:<MedicineLayout></MedicineLayout>,
+        children:[
             {
-                path:'baby/care',
+                path:'medicine/layout',
                 element:<BabyCare></BabyCare>
             }
         ]

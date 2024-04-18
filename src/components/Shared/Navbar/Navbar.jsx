@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from '../../../assets/images/LifeCare.jpg'
 import { IoMdCloseCircleOutline, IoMdLogIn, IoIosContact } from "react-icons/io";
 import { IoHomeOutline } from "react-icons/io5";
+import { GiMedicines } from "react-icons/gi";
 import './active.css'
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
@@ -32,6 +33,7 @@ const Navbar = () => {
                         {
                             isOpen ? <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[50] p-2 shadow bg-base-100 rounded-box w-52">
                                 <NavLink to='/' className="text-base hover:bg-green-800 hover:text-white rounded-md p-2 flex items-center gap-1"><IoHomeOutline /> Home</NavLink>
+                                <NavLink to='medicine/layout' className="text-base hover:bg-green-800 hover:text-white rounded-md p-2 flex items-center gap-1"><GiMedicines /> Medicine</NavLink>
                                 <NavLink to='/contact' className="text-base hover:bg-green-800 hover:text-white rounded-md p-2 flex items-center gap-1"><IoIosContact /> Contact</NavLink>
                             </ul> : ''
                         }
@@ -45,6 +47,7 @@ const Navbar = () => {
                 <div className="navbar-center top-4 hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-2">
                         <NavLink to='/' className="text-base hover:bg-green-800 hover:text-white rounded-md py-1 px-2 flex items-center gap-1"><IoHomeOutline /> Home</NavLink>
+                        <NavLink to='medicine/layout' className="text-base hover:bg-green-800 hover:text-white rounded-md p-2 flex items-center gap-1"><GiMedicines /> Medicine</NavLink>
                         <NavLink to='/contact' className="text-base hover:bg-green-800 hover:text-white rounded-md py-1 px-2 flex items-center gap-1"><IoIosContact /> Contact</NavLink>
                     </ul>
                 </div>

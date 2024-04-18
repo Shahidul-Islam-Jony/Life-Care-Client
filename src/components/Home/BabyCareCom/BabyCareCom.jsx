@@ -57,7 +57,7 @@ const BabyCareCom = () => {
                 </div>
             </div>
             <div className='flex justify-center mt-10'>
-                <Link to='/baby/care' className='btn btn-sm btn-outline'>See All</Link>
+                <Link to='medicine/layout' className='btn btn-sm btn-outline'>See All</Link>
             </div>
         </div>
     );
