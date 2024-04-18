@@ -15,13 +15,13 @@ const Categories = () => {
     const categories = [
         {
             id: 1,
-            img: '/categories/dental.png',
-            title: 'Dental Care'
+            img: '/categories/baby.jpg',
+            title: 'Baby Care'
         },
         {
             id: 2,
-            img: '/categories/health.png',
-            title: 'Personal Care'
+            img: '/categories/women.png',
+            title: 'For Women'
         },
         {
             id: 3,
@@ -35,13 +35,13 @@ const Categories = () => {
         },
         {
             id: 5,
-            img: '/categories/baby.jpg',
-            title: 'Baby Care'
+            img: '/categories/dental.png',
+            title: 'Dental Care'
         },
         {
             id: 6,
-            img: '/categories/women.png',
-            title: 'For Women'
+            img: '/categories/health.png',
+            title: 'Personal Care'
         },
         {
             id: 7,
@@ -61,7 +61,7 @@ const Categories = () => {
     ]
 
     return (
-        <div className='mt-10'>
+        <div data-aos="fade-up" data-aos-duration="2000" className='mt-10'>
             <h2 className='text-3xl font-bold font-serif my-10 text-center text-blue-600 textShadow border-b-4 border-double border-blue-500 w-fit mx-auto'>Categories</h2>
             <Swiper
                 slidesPerView={5}

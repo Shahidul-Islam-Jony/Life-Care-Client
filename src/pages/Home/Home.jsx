@@ -3,7 +3,13 @@ import Banner from "../../components/Home/Banner/Banner";
 import CardLink from "../../components/Home/CardLink/CardLink";
 import Categories from "../../components/Home/Categories/Categories";
 import Doctor from "../../components/Home/Doctor/Doctor";
+import WomenChoiseCom from "../../components/Home/WomenChoiseCom/WomenChoiseCom";
 import Footer from "../../components/Shared/Footer/Footer";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Home = () => {
     return (
@@ -14,6 +20,7 @@ const Home = () => {
                     <CardLink></CardLink>
                     <Categories></Categories>
                     <BabyCareCom></BabyCareCom>
+                    <WomenChoiseCom></WomenChoiseCom>
                 </div>
                 <div className="md:col-span-3">
                     <Doctor></Doctor>
