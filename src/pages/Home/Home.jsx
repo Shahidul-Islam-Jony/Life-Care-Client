@@ -2,8 +2,10 @@ import BabyCareCom from "../../components/Home/BabyCareCom/BabyCareCom";
 import Banner from "../../components/Home/Banner/Banner";
 import CardLink from "../../components/Home/CardLink/CardLink";
 import Categories from "../../components/Home/Categories/Categories";
+import DentalCareCom from "../../components/Home/DentalCareCom/DentalCareCom";
 import DiabeticCareCom from "../../components/Home/DiabeticCareCom/DiabeticCareCom";
 import Doctor from "../../components/Home/Doctor/Doctor";
+import OTC_MedicineCom from "../../components/Home/OTC_Medicine_Com/OTC_MedicineCom";
 import WomenChoiseCom from "../../components/Home/WomenChoiceCom/WomenChoiseCom";
 import Footer from "../../components/Shared/Footer/Footer";
 
@@ -23,6 +25,8 @@ const Home = () => {
                     <BabyCareCom></BabyCareCom>
                     <WomenChoiseCom></WomenChoiseCom>
                     <DiabeticCareCom></DiabeticCareCom>
+                    <OTC_MedicineCom></OTC_MedicineCom>
+                    <DentalCareCom></DentalCareCom>
                 </div>
                 <div className="md:col-span-3">
                     <Doctor></Doctor>
