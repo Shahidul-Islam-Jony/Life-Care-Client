@@ -1,25 +1,64 @@
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
-
-import img1 from '../../../assets/images/categories/dental.png'
-import img2 from '../../../assets/images/categories/diabetic.png'
-import img3 from '../../../assets/images/categories/health.png'
-import img4 from '../../../assets/images/categories/dental.png'
-import img5 from '../../../assets/images/categories/OTC-Medicine.png'
-import img6 from '../../../assets/images/categories/Prescription medicine.png'
 import { Link } from 'react-router-dom';
+import './categoriesStyle.css';
 
 const Categories = () => {
+
+    const categories = [
+        {
+            id: 1,
+            img: '/categories/dental.png',
+            title: 'Dental Care'
+        },
+        {
+            id: 2,
+            img: '/categories/health.png',
+            title: 'Personal Care'
+        },
+        {
+            id: 3,
+            img: '/categories/diabetic.png',
+            title: 'Diabetic Care'
+        },
+        {
+            id: 4,
+            img: '/categories/OTC-Medicine.png',
+            title: 'OTC Medicine'
+        },
+        {
+            id: 5,
+            img: '/categories/baby.jpg',
+            title: 'Baby Care'
+        },
+        {
+            id: 6,
+            img: '/categories/women.png',
+            title: 'For Women'
+        },
+        {
+            id: 7,
+            img: '/categories/herbal.png',
+            title: 'Herbal Medicine'
+        },
+        {
+            id: 8,
+            img: '/categories/Phermacy.jpg',
+            title: 'Phermacy Medicine'
+        },
+        {
+            id: 9,
+            img: '/categories/Prescription medicine.png',
+            title: 'Prescription Medicine'
+        }
+    ]
 
     return (
         <div className='mt-10'>
@@ -29,14 +68,30 @@ const Categories = () => {
                 spaceBetween={30}
                 navigation={true}
                 modules={[Pagination, Navigation]}
-                className="mySwiper md:w-[1000px] h-70"
+                className="mySwiper"
+                breakpoints={{
+                    //    Mobile view
+                    375: {
+                        slidesPerView: 2
+                    },
+                    // Tablet view
+                    768: {
+                        slidesPerView: 3
+                    },
+                    // Desktop view
+                    1024: {
+                        slidesPerView: 4
+                    }
+                }}
             >
-                <SwiperSlide><Link className=''><img src={img1}></img></Link></SwiperSlide>
-                <SwiperSlide><Link className=''><img src={img2}></img></Link></SwiperSlide>
-                <SwiperSlide><Link className=''><img src={img3}></img></Link></SwiperSlide>
-                <SwiperSlide><Link className=''><img src={img4}></img></Link></SwiperSlide>
-                <SwiperSlide><Link className=''><img src={img5}></img></Link></SwiperSlide>
-                <SwiperSlide><Link className=''><img src={img6}></img></Link></SwiperSlide>
+                {
+                    categories.map(category =>
+                        <SwiperSlide className='card2 border-2 border-blue-500 p-4 rounded-md hover:border-green-600' style={{width:'300px',height:'150px'}} key={category.id}><Link><div className='card-info'>
+                            <img src={category?.img} className='w-24 h-20 mx-auto hover:opacity-70' alt={category?.title}></img>
+                            <p className='title'>{category?.title}</p>
+                        </div></Link></SwiperSlide>
+                    )
+                }
             </Swiper>
 
         </div>
