@@ -2,8 +2,9 @@ import BabyCareCom from "../../components/Home/BabyCareCom/BabyCareCom";
 import Banner from "../../components/Home/Banner/Banner";
 import CardLink from "../../components/Home/CardLink/CardLink";
 import Categories from "../../components/Home/Categories/Categories";
+import DiabeticCareCom from "../../components/Home/DiabeticCareCom/DiabeticCareCom";
 import Doctor from "../../components/Home/Doctor/Doctor";
-import WomenChoiseCom from "../../components/Home/WomenChoiseCom/WomenChoiseCom";
+import WomenChoiseCom from "../../components/Home/WomenChoiceCom/WomenChoiseCom";
 import Footer from "../../components/Shared/Footer/Footer";
 
 import AOS from 'aos';
@@ -21,6 +22,7 @@ const Home = () => {
                     <Categories></Categories>
                     <BabyCareCom></BabyCareCom>
                     <WomenChoiseCom></WomenChoiseCom>
+                    <DiabeticCareCom></DiabeticCareCom>
                 </div>
                 <div className="md:col-span-3">
                     <Doctor></Doctor>
