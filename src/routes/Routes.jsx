@@ -4,34 +4,41 @@ import MainLayout from "../layout/MainLayout";
 import Login from "../pages/Login/Login";
 import BabyCare from "../pages/BabyCare/BabyCare";
 import MedicineLayout from "../layout/MedicineLayout";
+import Contact from "../pages/Contact/Contact";
 
 
 const router = createBrowserRouter([
     {
-        path:'/',
-        element:<MainLayout></MainLayout>,
-        children:[
+        path: '/',
+        element: <MainLayout></MainLayout>,
+        children: [
             {
-                path:'/',
-                element:<Home></Home>
+                path: '/',
+                element: <Home></Home>
             },
             {
-                path:'login',
-                element:<Login></Login>
+                path: 'login',
+                element: <Login></Login>
+            },
+            {
+                path: 'contact',
+                element: <Contact></Contact>
+            },
+            {
+                path: 'allMedicine',
+                element: <MedicineLayout></MedicineLayout>,
+                children: [
+                    {
+                        path: 'babyCare',
+                        element: <BabyCare></BabyCare>
+                    },
+                ]
             },
 
-        ]
-    },
-    {
-        path:'medicine/layout',
-        element:<MedicineLayout></MedicineLayout>,
-        children:[
-            {
-                path:'medicine/layout',
-                element:<BabyCare></BabyCare>
-            }
+
         ]
     }
+   
 ])
 
 export default router;
