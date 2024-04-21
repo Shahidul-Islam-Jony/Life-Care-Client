@@ -4,7 +4,7 @@ import Navbar from "../components/Shared/Navbar/Navbar";
 
 const MedicineLayout = () => {
     return (
-        <div className="mt-24 w-11/12 mx-auto">
+        <div className="my-24 w-11/12 mx-auto">
             <div className="relative z-20">
                 <Navbar></Navbar>
             </div>

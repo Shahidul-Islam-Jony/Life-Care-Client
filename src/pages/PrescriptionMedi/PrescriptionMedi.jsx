@@ -1,6 +1,6 @@
 import detol from '../../assets/images/babyCare/lectogen.webp'
 
-const BabyCare = () => {
+const PrescriptionMedi = () => {
     return (
         <div className="mb-28">
             <div data-aos="fade-up" data-aos-duration="2000" className=''>
@@ -102,11 +102,11 @@ const BabyCare = () => {
                             <button className="btn btn-sm btn-outline">Buy Now</button>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     );
 };
 
-export default BabyCare;
+export default PrescriptionMedi;
