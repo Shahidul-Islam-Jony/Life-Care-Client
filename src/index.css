@@ -8,3 +8,7 @@
 .textShadow{
     text-shadow: 2.5px 1px #067218;
 }
+
+.shadow{
+    box-shadow: 4px 6px 2px gray;
+}
