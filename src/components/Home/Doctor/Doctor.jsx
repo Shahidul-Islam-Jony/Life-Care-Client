@@ -7,18 +7,37 @@ import doc3 from '../../../assets/images/doctor/dr3.jpg'
 
 const Doctor = () => {
     return (
-        <div className='fixed md:mr-4 rounded-md'>
+        <div className='fixed md:mr-4 rounded-md w-3/12'>
             <Carousel autoPlay infiniteLoop showThumbs={false}>
-                <div>
-                    <img src={doc1} className='rounded-md'/>
-
+                <div style={{width:'100%',height:'400px'}}>
+                    <img src={doc1} className='rounded-md' />
+                    <p className='text-blue-600 text-lg font-bold'>Doctor 1</p>
+                    <div className='text-left'>
+                        <p><span className='font-bold'>Specialist: </span>Medicine</p>
+                        <p><span className='font-bold'>Email: </span>doc@gmail.com</p>
+                        <p><span className='font-bold'>Phone: </span>+88017..</p>
+                    </div>
+                    <button className='btn btn-sm btn-outline'>Appoitment</button>
                 </div>
-                <div>
-                    <img src={doc2} className='rounded-md'/>
-
+                <div style={{width:'100%',height:'400px'}}>
+                    <img src={doc2} className='rounded-md' />
+                    <p className='text-blue-600 text-lg font-bold'>Doctor 1</p>
+                    <div className='text-left'>
+                        <p><span className='font-bold'>Specialist: </span>Medicine</p>
+                        <p><span className='font-bold'>Email: </span>doc@gmail.com</p>
+                        <p><span className='font-bold'>Phone: </span>+88017..</p>
+                    </div>
+                    <button className='btn btn-sm btn-outline'>Appoitment</button>
                 </div>
-                <div>
-                    <img src={doc3} className='rounded-md'/>
+                <div style={{width:'100%',height:'400px'}}>
+                    <img src={doc3} className='rounded-md' />
+                    <p className='text-blue-600 text-lg font-bold'>Doctor 1</p>
+                    <div className='text-left'>
+                        <p><span className='font-bold'>Specialist: </span>Medicine</p>
+                        <p><span className='font-bold'>Email: </span>doc@gmail.com</p>
+                        <p><span className='font-bold'>Phone: </span>+88017..</p>
+                    </div>
+                    <button className='btn btn-sm btn-outline'>Appoitment</button>
                 </div>
             </Carousel>
         </div>
