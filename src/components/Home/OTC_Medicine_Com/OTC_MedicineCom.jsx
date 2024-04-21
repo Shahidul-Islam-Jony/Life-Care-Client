@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import detol from '../../../assets/images/babyCare/Savlon-Baby-Wips.webp'
+import detol from '../../../assets/images/OTC Medicine/Alben-Ds.webp'
 
 const OTC_MedicineCom = () => {
     return (
@@ -56,7 +56,7 @@ const OTC_MedicineCom = () => {
             </div>
         </div>
         <div className='flex justify-center mt-10'>
-            <Link to='/baby/care' className='btn btn-sm btn-outline'>See All</Link>
+            <Link to='allMedicine/otc' className='btn btn-sm btn-outline'>See All</Link>
         </div>
     </div>
     );
