@@ -13,12 +13,14 @@ import PersonalCare from "../pages/PersonalCare/PersonalCare";
 import HerbalCare from "../pages/HerbalCare/HerbalCare";
 import PhermacyMedi from "../pages/PhermacyMedi/PhermacyMedi";
 import PrescriptionMedi from "../pages/PrescriptionMedi/PrescriptionMedi";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout></MainLayout>,
+        errorElement:<ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
