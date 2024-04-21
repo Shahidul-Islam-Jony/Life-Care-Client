@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../../assets/images/LifeCare.jpg'
 import { IoMdCloseCircleOutline, IoMdLogIn, IoIosContact } from "react-icons/io";
-import { IoHomeOutline } from "react-icons/io5";
+import { IoHomeOutline, IoCartOutline } from "react-icons/io5";
 import { GiMedicines } from "react-icons/gi";
 import { FaPlusCircle } from "react-icons/fa";
 import { MdArticle } from "react-icons/md";
@@ -62,8 +62,11 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     {
-                        user ? <div>
-
+                        user ? <div className="flex items-center gap-4">
+                            <div className="relative">
+                                <IoCartOutline className="text-4xl font-medium" />
+                                <p className="absolute text-white bg-red-600 rounded-full px-1 text-sm -top-1 right-0">0</p>
+                            </div>
                             <div className="dropdown dropdown-end">
                                 <div tabIndex={0} role="button" className=""> <img onClick={() => setIsProfileClicked(!isProfileClick)} src={user?.photoURL} title={user?.displayName} className="w-10 h-10 rounded-full border-2 shadow-lg border-blue-800 cursor-pointer" alt={user?.displayName} /></div>
                                 {
